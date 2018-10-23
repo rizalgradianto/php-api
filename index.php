@@ -1,4 +1,4 @@
-/<?php 
+DATA<?php 
 $conn = mysqli_connect("localhost", "root", "", "php-api");
 
 if (mysqli_connect_errno()) {
@@ -28,6 +28,7 @@ $students = query("SELECT * FROM users");
  		<tr>
  			<td bgcolor="#D6D8DC" align="center">Id</td>
  			<td bgcolor="#D6D8DC" align="center">Username</td>
+ 			<td bgcolor="#D6D8DC" align="center">Password</td>
  			<td bgcolor="#D6D8DC" align="center">Level</td>
  			<td bgcolor="#D6D8DC" align="center">Fullname</td>
  		</tr>
@@ -37,6 +38,7 @@ $students = query("SELECT * FROM users");
  	<tr>
  		<td><?= $student["id"]?></td>
  		<td><?= $student["username"]?></td>
+ 		<td><?= $student["password"]?></td>
  		<td><?= $student["level"]?></td>
  		<td><?= $student["fullname"]?></td>
  	</tr>
