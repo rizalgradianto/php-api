@@ -1,4 +1,4 @@
-DATA<?php 
+<?php 
 $conn = mysqli_connect("localhost", "root", "", "php-api");
 
 if (mysqli_connect_errno()) {
@@ -24,6 +24,7 @@ $students = query("SELECT * FROM users");
  	<title></title>
  </head>
  <body>
+ 	<a href="form.php"> + Tambah Data</a>
  	<table border="1px" cellpadding="10" cellspacing="0">
  		<tr>
  			<td bgcolor="#D6D8DC" align="center">Id</td>
@@ -31,6 +32,8 @@ $students = query("SELECT * FROM users");
  			<td bgcolor="#D6D8DC" align="center">Password</td>
  			<td bgcolor="#D6D8DC" align="center">Level</td>
  			<td bgcolor="#D6D8DC" align="center">Fullname</td>
+ 			<td bgcolor="#D6D8DC" align="center">Action</td>
+
  		</tr>
  		<?php 
  		foreach ($students as $student ) : 	
@@ -41,7 +44,15 @@ $students = query("SELECT * FROM users");
  		<td><?= $student["password"]?></td>
  		<td><?= $student["level"]?></td>
  		<td><?= $student["fullname"]?></td>
+ 		<td align="center">
+ 			<a href="edit.php?id=<?php echo $data['id'] ?>">Ubah</a>
+ 			<a href="delete.php?id=<?php echo $data['id'] ?>">Hapus</a>
+
+ 			
+ 		</td>
+
  	</tr>
+
  <?php endforeach; ?>
  	</table>
  
