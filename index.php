@@ -45,8 +45,8 @@ $students = query("SELECT * FROM users");
  		<td><?= $student["level"]?></td>
  		<td><?= $student["fullname"]?></td>
  		<td align="center">
- 			<a href="edit.php?id=<?php echo $data['id'] ?>">Ubah</a>
- 			<a href="delete.php?id=<?php echo $data['id'] ?>">Hapus</a>
+ 			<a href="edit.php?id=<?php echo $student['id'] ?>">Ubah</a>
+ 			<a href="delete.php?id=<?php echo $student['id'] ?>">Hapus</a>
 
  			
  		</td>
